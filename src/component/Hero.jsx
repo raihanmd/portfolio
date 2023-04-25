@@ -1,9 +1,11 @@
-import { Button, Flex, Heading, Stack, Text, Container, Icon, Box, Link } from "@chakra-ui/react";
+import { Button, Flex, Heading, Stack, Text, Container, Icon, Box, Link, Image } from "@chakra-ui/react";
 import ParticleCustom from "./ParticleCustom";
 import Navbar from "./Navbar";
 import TypedJS from "../utils/TypedJS";
 
 import { BsGithub, BsInstagram, BsTiktok } from "react-icons/bs";
+
+import person from "../images/person.png";
 
 export default function Hero() {
   return (
@@ -60,10 +62,11 @@ export default function Hero() {
             </Stack>
           </Stack>
         </Flex>
-        <Flex flex={1} justifyContent={"center"}>
+        <Flex flex={1} justifyContent={"center"} p={6}>
           <div className="shape">
             <div className="shape2"></div>
           </div>
+          <Image position={"absolute"} src={person} alt="Person Image" />
         </Flex>
       </Stack>
     </Container>

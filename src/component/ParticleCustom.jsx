@@ -27,7 +27,7 @@ export default function ParticleCustom() {
         fullScreen: {
           zIndex: -100,
         },
-        fpsLimit: 120,
+        fpsLimit: 60,
         particles: {
           color: {
             value: COLOR.SECOND_COLOR,
