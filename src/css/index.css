@@ -27,8 +27,8 @@ p {
   position: relative;
   margin: auto;
   background: #bdcdd6;
-  width: 350px;
-  height: 350px;
+  width: 360px;
+  height: 356px;
   animation: MinRotateShape 10s infinite linear;
 }
 .shape2 {
@@ -36,7 +36,7 @@ p {
   position: relative;
   margin: auto;
   background: #93bfcf;
-  width: 350px;
+  width: 353px;
   height: 350px;
   animation: rotateShape 10s infinite linear;
   animation-delay: 40ms;
