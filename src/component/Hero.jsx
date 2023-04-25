@@ -3,7 +3,7 @@ import ParticleCustom from "./ParticleCustom";
 import Navbar from "./Navbar";
 import TypedJS from "../utils/TypedJS";
 
-import { BsGithub, BsInstagram, BsTiktok } from "react-icons/bs";
+import { BsGithub, BsInstagram, BsTiktok, BsYoutube } from "react-icons/bs";
 
 import person from "../images/person.png";
 
@@ -87,7 +87,7 @@ const SOCIAL_MEDIA = [
     href: "https://www.tiktok.com/@lynxpengenbisagolang",
   },
   {
-    icon: BsTiktok,
-    href: "https://www.tiktok.com/@lynxpengenbisagolang",
+    icon: BsYoutube,
+    href: "https://www.youtube.com/channel/UCT4aPXZrfCaKjYMCSGqUUEQ",
   },
 ];
