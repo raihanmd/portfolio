@@ -1,6 +1,8 @@
-import { Box, Flex, Text, IconButton, Stack, Collapse, Link, Popover, PopoverTrigger, useBreakpointValue, useDisclosure } from "@chakra-ui/react";
+import { Box, Flex, Text, IconButton, Stack, Collapse, Link, Popover, PopoverTrigger, useBreakpointValue, useDisclosure, Icon } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import COLOR from "../constant/color";
+
+import { FaReact } from "react-icons/fa";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -11,9 +13,12 @@ export default function Navbar() {
         <Flex flex={{ base: 1, md: "auto" }} ml={{ base: -2 }} display={{ base: "flex", md: "none" }}>
           <IconButton onClick={onToggle} icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />} variant={"ghost"} aria-label={"Toggle Navigation"} />
         </Flex>
-        <Text fontSize={"xl"} textAlign={useBreakpointValue({ base: "center", md: "left" })} fontFamily={"heading"} color={COLOR.SECOND_COLOR}>
-          Lynx Dev
-        </Text>
+        <Stack as={Link} href="/" p={2} spacing={1} direction={"row"}>
+          <Icon className="react-logo" as={FaReact} fontSize={"3xl"} color={"blue.400"} />
+          <Text fontSize={"xl"} textAlign={useBreakpointValue({ base: "center", md: "left" })} fontFamily={"heading"} color={COLOR.SECOND_COLOR}>
+            Lynx Dev
+          </Text>
+        </Stack>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "end" }}>
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
@@ -42,7 +47,7 @@ const DesktopNav = () => {
                 p={2}
                 href={navItem.href ?? "#"}
                 fontSize={"md"}
-                fontWeight={500}
+                fontWeight={600}
                 color={linkColor}
                 _hover={{
                   textDecoration: "none",
