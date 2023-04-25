@@ -52,9 +52,7 @@ export default function Hero() {
         </Flex>
         <Flex flex={1} justifyContent={"center"}>
           <div className="shape">
-            <div className="shape2">
-              <div className="shape3"></div>
-            </div>
+            <div className="shape2"></div>
           </div>
         </Flex>
       </Stack>

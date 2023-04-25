@@ -23,32 +23,23 @@ p {
   font-family: "Quicksand";
 }
 .shape {
-  border-radius: 56% 95% 60% 85% / 115% 45% 65% 54%;
-  position: relative;
-  margin: auto;
-  background: #bdcdd6;
-  width: 360px;
-  height: 356px;
-  animation: MinRotateShape 10s infinite linear;
-}
-.shape2 {
-  border-radius: 86% 65% 50% 85% / 85% 65% 75% 74%;
+  border-radius: 50% 100% 85% 142% / 60% 120% 80% 60%;
   position: relative;
   margin: auto;
   background: #93bfcf;
-  width: 353px;
-  height: 350px;
-  animation: rotateShape 10s infinite linear;
+  width: 340px;
+  height: 340px;
+  animation: MinRotateShape 10s infinite linear;
   animation-delay: 40ms;
 }
-.shape3 {
-  border-radius: 43% 116% 76% 68% / 65% 83% 79% 87%;
+.shape2 {
+  border-radius: 60% 120% 80% 60% / 50% 100% 85% 142%;
   position: relative;
   margin: auto;
   background: #6096b4;
-  width: 350px;
-  height: 350px;
-  animation: rotateShape 10s infinite linear;
+  width: 320px;
+  height: 320px;
+  animation: MinRotateShape 10s infinite linear;
   animation-delay: 90ms;
 }
 
@@ -78,10 +69,6 @@ p {
     width: 300px;
     height: 310px;
   }
-  .shape3 {
-    width: 290px;
-    height: 290px;
-  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -93,10 +80,6 @@ p {
     width: 260px;
     height: 270px;
   }
-  .shape3 {
-    width: 250px;
-    height: 250px;
-  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -107,9 +90,5 @@ p {
   .shape2 {
     width: 200px;
     height: 210px;
-  }
-  .shape3 {
-    width: 200px;
-    height: 200px;
   }
 }
