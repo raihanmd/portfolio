@@ -30,7 +30,6 @@ p {
   width: 340px;
   height: 340px;
   animation: MinRotateShape 10s infinite linear;
-  animation-delay: 40ms;
 }
 .shape2 {
   border-radius: 60% 120% 80% 60% / 50% 100% 85% 142%;
@@ -40,7 +39,6 @@ p {
   width: 320px;
   height: 320px;
   animation: MinRotateShape 10s infinite linear;
-  animation-delay: 90ms;
 }
 
 @keyframes rotateShape {
