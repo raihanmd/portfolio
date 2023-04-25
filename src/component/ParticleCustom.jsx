@@ -49,7 +49,7 @@ export default function ParticleCustom() {
               default: "bounce",
             },
             random: false,
-            speed: 6,
+            speed: 3,
             straight: false,
           },
           number: {
@@ -57,7 +57,7 @@ export default function ParticleCustom() {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 30,
           },
           opacity: {
             value: 0.5,
