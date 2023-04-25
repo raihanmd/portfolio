@@ -62,11 +62,11 @@ export default function Hero() {
             </Stack>
           </Stack>
         </Flex>
-        <Flex flex={1} justifyContent={"center"} p={6}>
+        <Flex flex={1} justifyContent={"center"} alignItems={"center"}>
           <div className="shape">
             <div className="shape2"></div>
           </div>
-          <Image position={"absolute"} src={person} alt="Person Image" />
+          <Image className="person" position={"absolute"} src={person} alt="Person Image" />
         </Flex>
       </Stack>
     </Container>
