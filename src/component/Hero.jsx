@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Image, Stack, Text, useBreakpointValue, Container } from "@chakra-ui/react";
+import { Button, Flex, Heading, Stack, Text, Container } from "@chakra-ui/react";
 import ParticleCustom from "./ParticleCustom";
 import Navbar from "./Navbar";
 import TypedJS from "../utils/TypedJS";
@@ -10,7 +10,7 @@ export default function Hero() {
       <ParticleCustom />
       <Stack py={{ base: "0", md: "20" }} maxW={"7xl"} minH={"80vh"} direction={{ base: "column", md: "row" }}>
         <Flex flex={2} align={"center"} justify={"center"} alignItems={"center"}>
-          <Stack spacing={3} w={"full"} maxW={{ base: "lg", lg: "full" }} pl={{ base: "10", lg: "20" }}>
+          <Stack spacing={3} w={"full"} maxW={{ base: "lg", lg: "full" }} px={{ base: "5" }}>
             <Heading fontSize={{ base: "2xl", md: "3xl", lg: "5xl" }}>
               <Text as={"span"} position={"relative"}>
                 Hello There 👋
