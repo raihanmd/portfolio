@@ -10,8 +10,8 @@ export default function About() {
     <Container minW={"full"} background={"white"} mx={"auto"}>
       <Stack id="about" spacing={10} mx={"auto"} maxW={"7xl"} py={10} direction={"column"}>
         <Flex justify={"center"} align={"center"} gap={2} maxW={"7xl"}>
-          <Icon fontSize={"5xl"} as={GoPerson} color={COLOR.MAIN_COLOR} />
-          <Text className="logo" fontSize={"5xl"}>
+          <Icon fontSize={{ base: "4xl", md: "5xl" }} as={GoPerson} color={COLOR.MAIN_COLOR} />
+          <Text className="logo" fontSize={{ base: "3xl", md: "5xl" }}>
             About <span style={{ color: COLOR.MAIN_BLUE }}>Me</span>
           </Text>
         </Flex>

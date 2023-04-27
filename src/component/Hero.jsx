@@ -15,7 +15,7 @@ export default function Hero() {
       <Stack margin={0} py={{ base: "0", md: "20" }} px={{ lg: "38", xl: "30" }} maxW={"7xl"} minH={"80vh"} direction={{ base: "column", lg: "row" }}>
         <Flex flex={2} align={"center"} justify={"center"} alignItems={"center"}>
           <Stack spacing={4} w={"full"} maxW={{ base: "xl", lg: "full" }} px={{ base: "5" }}>
-            <Heading fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}>
+            <Heading fontSize={{ base: "3xl", md: "5xl" }}>
               <Text as={"span"} position={"relative"}>
                 Hello There 👋
               </Text>
