@@ -15,7 +15,7 @@ export default function Navbar() {
         </Flex>
         <Stack as={Link} href="/" p={2} spacing={1} direction={"row"}>
           <Icon className="react-logo" as={FaReact} fontSize={"3xl"} color={"blue.400"} />
-          <Text fontSize={"xl"} textAlign={useBreakpointValue({ base: "center", md: "left" })} fontFamily={"heading"} color={COLOR.SECOND_COLOR}>
+          <Text className="logo" fontSize={"xl"} textAlign={useBreakpointValue({ base: "center", md: "left" })} fontFamily={"heading"} color={COLOR.SECOND_COLOR}>
             Lynx Dev
           </Text>
         </Stack>
@@ -100,7 +100,7 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: "Home",
-    href: "/",
+    href: "#home",
   },
   {
     label: "About",

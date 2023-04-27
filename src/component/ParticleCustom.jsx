@@ -2,7 +2,6 @@ import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import COLOR from "../constant/color";
-import { Box } from "@chakra-ui/react";
 
 export default function ParticleCustom() {
   const particlesInit = useCallback(async (engine) => {
@@ -13,7 +12,7 @@ export default function ParticleCustom() {
 
   return (
     <Particles
-      width="100vw"
+      width="100%"
       height="100vh"
       id="particles"
       init={particlesInit}

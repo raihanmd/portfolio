@@ -1,9 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Righteous&display=swap");
-
-body {
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;800&family=Quicksand:wght@300;500;700&family=Righteous&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+#root {
+  overflow-x: hidden !important;
 }
 #particles {
   width: 100%;
@@ -15,16 +18,19 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Righteous", cursive;
+  font-family: "League Spartan", sans-serif;
 }
 h4,
 h5,
 p {
   font-family: "Quicksand";
 }
+p.logo {
+  font-family: "Righteous", cursive;
+}
 .shape {
   border-radius: 50% 100% 85% 142% / 60% 120% 80% 60%;
-  position: relative;
+  position: absolute;
   background: #90cdf4;
   margin: auto 0;
   width: 360px;
@@ -33,7 +39,7 @@ p {
 }
 .shape2 {
   border-radius: 60% 120% 80% 60% / 50% 100% 85% 142%;
-  position: relative;
+  position: absolute;
   background: #4299e1;
   margin: auto 0;
   width: 350px;
@@ -45,14 +51,6 @@ p {
   animation: MinRotateShape 6s infinite linear;
 }
 
-@keyframes rotateShape {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(360deg);
-  }
-}
 @keyframes MinRotateShape {
   from {
     transform: rotateZ(0deg);
@@ -62,23 +60,37 @@ p {
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1280px) {
   .person {
-    width: 270px;
+    width: 210px;
   }
   .shape {
-    width: 310px;
-    height: 310px;
+    width: 260px;
+    height: 260px;
   }
   .shape2 {
-    width: 300px;
-    height: 310px;
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .person {
+    width: 250px;
+  }
+  .shape {
+    width: 290px;
+    height: 290px;
+  }
+  .shape2 {
+    width: 270px;
+    height: 270px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .person {
-    width: 230px;
+    width: 240px;
   }
   .shape {
     width: 280px;
@@ -92,14 +104,14 @@ p {
 
 @media only screen and (max-width: 480px) {
   .person {
-    width: 160px;
+    width: 150px;
   }
   .shape {
-    width: 210px;
-    height: 210px;
+    width: 185px;
+    height: 185px;
   }
   .shape2 {
-    width: 200px;
-    height: 210px;
+    width: 185px;
+    height: 185px;
   }
 }

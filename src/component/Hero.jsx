@@ -5,14 +5,14 @@ import TypedJS from "../utils/TypedJS";
 
 import { BsGithub, BsInstagram, BsTiktok, BsYoutube } from "react-icons/bs";
 
-import person from "../images/person.png";
+import person from "../images/person.webp";
 
 export default function Hero() {
   return (
-    <Container maxW={"7xl"} minH={"100vh"} mx={"auto"}>
+    <Container maxW={{ lg: "4xl", xl: "6xl", "2xl": "7xl" }} minH={"100vh"} mx={"auto"} overflow={"hidden"}>
       <Navbar />
       <ParticleCustom />
-      <Stack py={{ base: "0", md: "20" }} px={{ xl: "30" }} maxW={"7xl"} minH={"80vh"} direction={{ base: "column", lg: "row" }}>
+      <Stack margin={0} py={{ base: "0", md: "20" }} px={{ lg: "38", xl: "30" }} maxW={"7xl"} minH={"80vh"} direction={{ base: "column", lg: "row" }}>
         <Flex flex={2} align={"center"} justify={"center"} alignItems={"center"}>
           <Stack spacing={4} w={"full"} maxW={{ base: "xl", lg: "full" }} px={{ base: "5" }}>
             <Heading fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}>
@@ -24,8 +24,9 @@ export default function Hero() {
                 I'm <span style={{ color: "tomato" }}>Muhammad</span> Raihan Firdaus.
               </Text>{" "}
             </Heading>
-            <Text fontSize={"lg"} color={"gray.700"}>
+            <Text fontSize={"xl"} color={"gray.700"}>
               <TypedJS
+                loop={true}
                 string={[
                   'I\'m <span style="color: black">Frontend</span> Developer.',
                   'I\'m <span style="color: red">Backend</span> Developer.',
@@ -55,7 +56,21 @@ export default function Hero() {
             </Stack>
             <Stack direction={"row"} spacing={3}>
               {SOCIAL_MEDIA.map((item) => (
-                <Flex as={Link} bgColor={"blue.400"} borderRadius={"lg"} p={1.5} href={item.href} boxShadow={"0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"} isExternal>
+                <Flex
+                  as={Link}
+                  _hover={{
+                    bg: "blue.500",
+                  }}
+                  _focus={{
+                    bg: "blue.500",
+                  }}
+                  bgColor={"blue.400"}
+                  borderRadius={"lg"}
+                  p={1.5}
+                  href={item.href}
+                  boxShadow={"0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"}
+                  isExternal
+                >
                   <Icon as={item.icon} fontSize={"1.3rem"} color={"white"} />
                 </Flex>
               ))}
@@ -63,9 +78,9 @@ export default function Hero() {
           </Stack>
         </Flex>
         <Flex flex={1} justifyContent={"center"} alignItems={"center"}>
-          <div className="shape">
-            <div className="shape2"></div>
-          </div>
+          <Box className="shape" boxShadow={"8px 8px 30px 10px rgb(144 205 244 / 48%)"}>
+            <Box className="shape2" boxShadow={"8px 8px 30px 10px rgb(66 153 225 / 48%)"}></Box>
+          </Box>
           <Image className="person" position={"absolute"} src={person} alt="Person Image" />
         </Flex>
       </Stack>

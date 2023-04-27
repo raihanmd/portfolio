@@ -2,7 +2,7 @@ import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   fonts: {
-    heading: `'Righteous', sans-serif`,
+    heading: `'League Spartan', sans-serif`,
     body: `'Quicksand', sans-serif`,
   },
 });
