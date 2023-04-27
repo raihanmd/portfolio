@@ -11,7 +11,6 @@ export default function TypedJS({ string, loop, speed }) {
       typeSpeed: speed ? speed : 50,
       backSpeed: 50,
       loop: loop ? loop : false,
-      shuffle: true,
     });
 
     return () => {
