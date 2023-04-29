@@ -1,9 +1,9 @@
 import { Box, Stack, Flex, Icon, Heading, Container, Text, Button, Link } from "@chakra-ui/react";
 import { GoPerson } from "react-icons/go";
+import { BsArrowDownCircle } from "react-icons/bs";
 import { RiRoadMapFill } from "react-icons/ri";
 import { MdMail } from "react-icons/md";
 import COLOR from "../constant/color";
-import TypedJS from "../utils/TypedJS";
 
 export default function About() {
   return (
@@ -26,12 +26,9 @@ export default function About() {
               Firdaus
             </Heading>
             <Heading fontSize={"xl"} fontWeight={350} textAlign={{ base: "justify", lg: "start" }}>
-              <TypedJS
-                speed={20}
-                string={[
-                  "My name is Muhammad Raihan Firdaus, I currently reside in West Java, Indonesia. I am 16 years old student at SMK Miftahussalam. My passion lies in web development, specifically in both front-end and back-end development, as well as game development. I am highly motivated to learn and expand my skills in these fields, and I am always on the lookout for new and exciting projects to work on. In my free time, I enjoy experimenting with various coding languages and frameworks, as well as playing and analyzing video games. I am excited to continue pursuing my interests and developing my portfolio in the ever-growing field of web and game development.",
-                ]}
-              />
+              My name is Muhammad Raihan Firdaus, I currently reside in West Java, Indonesia. I am 16 years old student at SMK Miftahussalam. My passion lies in web development, specifically in both front-end and back-end development, as
+              well as game development. I am highly motivated to learn and expand my skills in these fields, and I am always on the lookout for new and exciting projects to work on. In my free time, I enjoy experimenting with various coding
+              languages and frameworks, as well as playing and analyzing video games. I am excited to continue pursuing my interests and developing my portfolio in the ever-growing field of web and game development.
             </Heading>
             <Box>
               {INFO.map((item) => (
@@ -41,12 +38,31 @@ export default function About() {
                 </Flex>
               ))}
             </Box>
-            <Box>
+            <Stack direction={{ base: "column", lg: "row" }} marginTop={"1.8rem"}>
+              <Button
+                as={Link}
+                textDecoration={"none"}
+                href={"#skills"}
+                px={"1.8rem"}
+                fontSize={"sm"}
+                rounded={"full"}
+                bg={COLOR.MAIN_COLOR}
+                color={"white"}
+                boxShadow={"0px 1px 25px -5px rgb(232 160 191 / 48%), 0 10px 10px -5px rgb(232 160 191 / 43%)"}
+                _hover={{
+                  bg: "#D090AB",
+                }}
+                _focus={{
+                  bg: "#D090AB",
+                }}
+              >
+                My Skills
+                <Icon as={BsArrowDownCircle} fontSize={"xl"} marginLeft={"2"} />
+              </Button>
               <Button
                 as={Link}
                 textDecoration={"none"}
                 href={"mailto:lynxeveloperofficial@gmail.com"}
-                marginTop={{ lg: "5" }}
                 px={"1.8rem"}
                 fontSize={"sm"}
                 rounded={"full"}
@@ -62,7 +78,7 @@ export default function About() {
               >
                 Contact Email
               </Button>
-            </Box>
+            </Stack>
           </Flex>
         </Stack>
       </Stack>

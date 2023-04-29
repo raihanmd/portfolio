@@ -1,10 +1,10 @@
 import { Button, Flex, Heading, Stack, Text, Container, Icon, Box, Link, Image } from "@chakra-ui/react";
-import ParticleCustom from "./ParticleCustom";
-import Navbar from "./Navbar";
-import TypedJS from "../utils/TypedJS";
 
 import { BsGithub, BsInstagram, BsTiktok, BsYoutube } from "react-icons/bs";
 
+import ParticleCustom from "./ParticleCustom";
+import Navbar from "./Navbar";
+import TypedJS from "../utils/TypedJS";
 import person from "../images/person.webp";
 
 export default function Hero() {
@@ -15,7 +15,7 @@ export default function Hero() {
       <Stack margin={0} py={{ base: "0", md: "20" }} px={{ lg: "38", xl: "30" }} maxW={"7xl"} minH={"80vh"} direction={{ base: "column", lg: "row" }}>
         <Flex flex={2} align={"center"} justify={"center"} alignItems={"center"}>
           <Stack spacing={4} w={"full"} maxW={{ base: "xl", lg: "full" }} px={{ base: "5" }}>
-            <Heading fontSize={{ base: "3xl", md: "5xl" }}>
+            <Heading fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}>
               <Text as={"span"} position={"relative"}>
                 Hello There 👋
               </Text>
@@ -35,7 +35,7 @@ export default function Hero() {
                 ]}
               />
             </Text>
-            <Stack direction={{ base: "column", md: "row" }}>
+            <Stack direction={{ base: "column", lg: "row" }}>
               <Button
                 marginTop={{ lg: "16" }}
                 px={"1.65rem"}
@@ -77,11 +77,11 @@ export default function Hero() {
             </Stack>
           </Stack>
         </Flex>
-        <Flex flex={1} justifyContent={"center"} alignItems={"center"}>
-          <Box className="shape" boxShadow={"8px 8px 30px 10px rgb(144 205 244 / 48%)"}>
-            <Box className="shape2" boxShadow={"8px 8px 30px 10px rgb(66 153 225 / 48%)"}></Box>
+        <Flex flex={1} justifyContent={"center"} alignItems={"center"} w={"full"} h={"auto"}>
+          <Box className="shape" boxShadow={"8px 8px 30px 10px rgb(144 205 244 / 48%)"} w={{ base: "180px", sm: "280px", "2xl": "320px" }} h={{ base: "180px", sm: "280px", "2xl": "320px" }}>
+            <Box className="shape2" boxShadow={"8px 8px 30px 10px rgb(66 153 225 / 48%)"} w={{ base: "180px", sm: "280px", "2xl": "320px" }} h={{ base: "180px", sm: "280px", "2xl": "320px" }} />
           </Box>
-          <Image className="person" position={"absolute"} src={person} alt="Person Image" />
+          <Image className={"person"} position={"absolute"} src={person} alt="Person Image" w={{ base: "160px", sm: "260px", "2xl": "280px" }} />
         </Flex>
       </Stack>
     </Container>

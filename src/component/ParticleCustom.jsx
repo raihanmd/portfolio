@@ -12,8 +12,6 @@ export default function ParticleCustom() {
 
   return (
     <Particles
-      width="100%"
-      height="100vh"
       id="particles"
       init={particlesInit}
       loaded={particlesLoaded}

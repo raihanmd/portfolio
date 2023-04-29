@@ -10,10 +10,11 @@
 }
 #particles {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   z-index: -100;
   display: inline;
+  overflow-x: hidden !important;
 }
 h1,
 h2,
@@ -33,8 +34,6 @@ p.logo {
   position: absolute;
   background: #90cdf4;
   margin: auto 0;
-  width: 360px;
-  height: 360px;
   animation: MinRotateShape 10s infinite linear;
 }
 .shape2 {
@@ -42,8 +41,6 @@ p.logo {
   position: absolute;
   background: #4299e1;
   margin: auto 0;
-  width: 350px;
-  height: 350px;
   animation: MinRotateShape 10s infinite linear;
 }
 
@@ -57,61 +54,5 @@ p.logo {
   }
   to {
     transform: rotateZ(-360deg);
-  }
-}
-
-@media only screen and (max-width: 1280px) {
-  .person {
-    width: 210px;
-  }
-  .shape {
-    width: 260px;
-    height: 260px;
-  }
-  .shape2 {
-    width: 260px;
-    height: 260px;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .person {
-    width: 250px;
-  }
-  .shape {
-    width: 290px;
-    height: 290px;
-  }
-  .shape2 {
-    width: 270px;
-    height: 270px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .person {
-    width: 240px;
-  }
-  .shape {
-    width: 280px;
-    height: 280px;
-  }
-  .shape2 {
-    width: 260px;
-    height: 270px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .person {
-    width: 150px;
-  }
-  .shape {
-    width: 185px;
-    height: 185px;
-  }
-  .shape2 {
-    width: 185px;
-    height: 185px;
   }
 }
