@@ -35,9 +35,8 @@ export default function About() {
             filter="blur(20px)"
             data-aos="fade-right"
             data-aos-offset="50"
-            data-aos-once="true"
           />
-          <Flex flex={2} gap={{ base: "10", lg: "5" }} direction={"column"} textAlign={{ base: "center", lg: "start" }} data-aos="fade-left" data-aos-duration="900" data-aos-offset="50" data-aos-once="true">
+          <Flex flex={2} gap={{ base: "10", lg: "5" }} direction={"column"} textAlign={{ base: "center", lg: "start" }} data-aos="fade-left" data-aos-duration="900" data-aos-offset="50">
             <Heading fontSize={{ base: "3xl", lg: "4xl" }} fontWeight={700}>
               Muhammad{" "}
               <Heading display={"inline"} color={COLOR.MAIN_BLUE} fontSize={{ base: "3xl", lg: "4xl" }} fontWeight={700}>
