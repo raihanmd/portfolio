@@ -5,16 +5,12 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-#root {
-  overflow-x: hidden !important;
-}
 #particles {
   width: 100%;
   min-height: 100vh;
   position: relative;
   z-index: -100;
   display: inline;
-  overflow-x: hidden !important;
 }
 h1,
 h2,

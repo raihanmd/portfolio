@@ -1,8 +1,8 @@
 import { Box, Flex, Text, IconButton, Stack, Collapse, Link, Popover, PopoverTrigger, useBreakpointValue, useDisclosure, Icon } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import COLOR from "../constant/color";
-
 import { FaReact } from "react-icons/fa";
+
+import COLOR from "../constant/color";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();

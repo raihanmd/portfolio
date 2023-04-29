@@ -1,6 +1,10 @@
 import { Button, Flex, Heading, Stack, Text, Container, Icon, Box, Link, Image } from "@chakra-ui/react";
 
 import { BsGithub, BsInstagram, BsTiktok, BsYoutube } from "react-icons/bs";
+import { useEffect } from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import ParticleCustom from "./ParticleCustom";
 import Navbar from "./Navbar";
@@ -8,12 +12,16 @@ import TypedJS from "../utils/TypedJS";
 import person from "../images/person.webp";
 
 export default function Hero() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <Container maxW={{ lg: "4xl", xl: "6xl", "2xl": "7xl" }} minH={"100vh"} mx={"auto"} overflow={"hidden"}>
       <Navbar />
       <ParticleCustom />
       <Stack margin={0} py={{ base: "0", md: "20" }} px={{ lg: "38", xl: "30" }} maxW={"7xl"} minH={"80vh"} direction={{ base: "column", lg: "row" }}>
-        <Flex flex={2} align={"center"} justify={"center"} alignItems={"center"}>
+        <Flex flex={2} align={"center"} justify={"center"} alignItems={"center"} data-aos="zoom-in" data-aos-offset="50">
           <Stack spacing={4} w={"full"} maxW={{ base: "xl", lg: "full" }} px={{ base: "5" }}>
             <Heading fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}>
               <Text as={"span"} position={"relative"}>
@@ -78,10 +86,26 @@ export default function Hero() {
           </Stack>
         </Flex>
         <Flex flex={1} justifyContent={"center"} alignItems={"center"} w={"full"} h={"auto"}>
-          <Box className="shape" boxShadow={"8px 8px 30px 10px rgb(144 205 244 / 48%)"} w={{ base: "180px", sm: "280px", "2xl": "320px" }} h={{ base: "180px", sm: "280px", "2xl": "320px" }}>
-            <Box className="shape2" boxShadow={"8px 8px 30px 10px rgb(66 153 225 / 48%)"} w={{ base: "180px", sm: "280px", "2xl": "320px" }} h={{ base: "180px", sm: "280px", "2xl": "320px" }} />
+          <Box
+            className="shape"
+            boxShadow={"8px 8px 30px 10px rgb(144 205 244 / 48%)"}
+            w={{ base: "180px", sm: "280px", "2xl": "320px" }}
+            h={{ base: "180px", sm: "280px", "2xl": "320px" }}
+            data-aos="zoom-in"
+            data-aos-duration="500"
+            data-aos-offset="-20"
+          >
+            <Box
+              className="shape2"
+              boxShadow={"8px 8px 30px 10px rgb(66 153 225 / 48%)"}
+              w={{ base: "180px", sm: "280px", "2xl": "320px" }}
+              h={{ base: "180px", sm: "280px", "2xl": "320px" }}
+              data-aos="zoom-in"
+              data-aos-duration="800"
+              data-aos-offset="-20"
+            />
           </Box>
-          <Image className={"person"} position={"absolute"} src={person} alt="Person Image" w={{ base: "160px", sm: "260px", "2xl": "280px" }} />
+          <Image className={"person"} position={"absolute"} src={person} alt="Person Image" w={{ base: "160px", sm: "260px", "2xl": "280px" }} data-aos="zoom-in" data-aos-duration="800" data-aos-offset="-20" />
         </Flex>
       </Stack>
     </Container>
