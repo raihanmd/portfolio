@@ -44,7 +44,7 @@ export default function Hero() {
             </Text>
             <Stack direction={{ base: "column", lg: "row" }}>
               <Button
-                data-aos="fade-down"
+                data-aos="fade-up"
                 data-aos-delay={"1200"}
                 marginTop={{ lg: "16" }}
                 px={"1.65rem"}

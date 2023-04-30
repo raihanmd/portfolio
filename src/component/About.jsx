@@ -13,7 +13,7 @@ AOS.init();
 export default function About() {
   return (
     <Container minW={"full"} background={"white"} mx={"auto"} clipPath={{ "2xl": "polygon(0 20%, 100% 0, 100% 80%, 0% 100%)" }} py={{ base: 10, "2xl": 20 }} overflow={"hidden"}>
-      <Stack id="about" spacing={10} mx={"auto"} maxW={{ xl: "5xl", "2xl": "7xl" }} py={10} direction={"column"} background={"white"}>
+      <Stack id="about" spacing={10} mx={"auto"} maxW={{ base: "xl", xl: "5xl", "2xl": "7xl" }} py={10} direction={"column"} background={"white"} px={{ lg: "38", xl: "30" }}>
         <Flex justify={"center"} align={"center"} gap={2} maxW={"7xl"} data-aos="zoom-in" data-aos-offset="50" data-aos-once="true">
           <Icon fontSize={{ base: "4xl", md: "5xl" }} as={GoPerson} color={COLOR.MAIN_COLOR} />
           <Text className="subhead" fontSize={{ base: "3xl", md: "5xl" }}>
@@ -22,8 +22,8 @@ export default function About() {
         </Flex>
         <Stack spacing={10} maxW={"7xl"} direction={{ base: "column", lg: "row" }} px={{ base: "5", lg: "30", xl: "30" }} align={{ base: "center", xl: "start" }}>
           <Box
-            w={{ base: "250px", md: "sm", lg: "sm" }}
-            h={{ base: "250px", md: "sm", lg: "sm" }}
+            w={{ base: "250px", md: "xs", lg: "sm" }}
+            h={{ base: "250px", md: "xs", lg: "sm" }}
             borderRadius={"full"}
             backgroundImage={Picture}
             backgroundPosition={"center"}
