@@ -4,16 +4,23 @@ import { FaReact } from "react-icons/fa";
 
 import COLOR from "../constant/color";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init({
+  startEvent: "load",
+});
+
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <Box id="navbar">
       <Flex bg={"transparent"} color={COLOR.MAIN_COLOR} minH={"60px"} py={{ base: 2 }} px={{ base: 4 }} borderStyle={"solid"} align={"center"}>
         <Flex flex={{ base: 1, md: "auto" }} ml={{ base: -2 }} display={{ base: "flex", md: "none" }}>
           <IconButton onClick={onToggle} icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />} variant={"ghost"} aria-label={"Toggle Navigation"} />
         </Flex>
-        <Stack as={Link} href="/" p={2} spacing={1} direction={"row"}>
+        <Stack as={Link} href="/" p={2} spacing={1} direction={"row"} data-aos="fade-down" data-aos-delay={"100"}>
           <Icon className="react-logo" as={FaReact} fontSize={"3xl"} color={"blue.400"} />
           <Text className="logo" fontSize={"xl"} textAlign={useBreakpointValue({ base: "center", md: "left" })} fontFamily={"heading"} color={COLOR.SECOND_COLOR}>
             Lynx Dev
@@ -40,7 +47,7 @@ const DesktopNav = () => {
   return (
     <Stack direction={"row"} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
+        <Box key={navItem.label} data-aos="fade-down" data-aos-delay={navItem.delay}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Link
@@ -101,17 +108,21 @@ const NAV_ITEMS = [
   {
     label: "Home",
     href: "#home",
+    delay: "200",
   },
   {
     label: "About",
     href: "#about",
+    delay: "300",
   },
   {
     label: "Certificates",
     href: "#certificates",
+    delay: "400",
   },
   {
     label: "My Projects",
     href: "#projects",
+    delay: "500",
   },
 ];
