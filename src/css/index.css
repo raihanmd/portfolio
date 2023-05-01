@@ -47,6 +47,10 @@ p.subhead {
   animation: MinRotateShape 6s infinite linear;
 }
 
+.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
 @keyframes MinRotateShape {
   from {
     transform: rotateZ(0deg);

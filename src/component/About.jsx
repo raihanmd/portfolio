@@ -1,39 +1,58 @@
-import { Box, Stack, Flex, Icon, Heading, Container, Text, Button, Link } from "@chakra-ui/react";
+import { Box, Stack, Flex, Icon, Heading, Container, Text, Button, Link, Tooltip } from "@chakra-ui/react";
 import { GoPerson } from "react-icons/go";
 import { BsArrowDownCircle } from "react-icons/bs";
 import { RiRoadMapFill } from "react-icons/ri";
 import { MdMail } from "react-icons/md";
 import COLOR from "../constant/color";
-import Picture from "../images/picture.webp";
+import lynxPic from "../images/picture.webp";
+import personPic from "../images/pictureai.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import TypedJS from "../utils/TypedJS";
+import { useEffect, useState } from "react";
 
-AOS.init();
 export default function About() {
+  const [personImage, setPersonImage] = useState(true);
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  });
+
   return (
-    <Container minW={"full"} background={"white"} mx={"auto"} clipPath={{ "2xl": "polygon(0 20%, 100% 0, 100% 80%, 0% 100%)" }} py={{ base: 10, "2xl": 20 }} overflow={"hidden"}>
+    <Container minW={"full"} background={"white"} mx={"auto"} py={{ base: 10, "2xl": 20 }} overflow={"hidden"} zIndex={"100"}>
       <Stack id="about" spacing={10} mx={"auto"} maxW={{ base: "xl", xl: "5xl", "2xl": "7xl" }} py={10} direction={"column"} background={"white"} px={{ lg: "38", xl: "30" }}>
-        <Flex justify={"center"} align={"center"} gap={2} maxW={"7xl"} data-aos="zoom-in" data-aos-offset="50" data-aos-once="true">
-          <Icon fontSize={{ base: "4xl", md: "5xl" }} as={GoPerson} color={COLOR.MAIN_COLOR} />
-          <Text className="subhead" fontSize={{ base: "3xl", md: "5xl" }}>
+        <Flex justify={"center"} align={"center"} gap={2} maxW={"7xl"}>
+          <Icon fontSize={{ base: "4xl", md: "5xl" }} as={GoPerson} color={COLOR.MAIN_COLOR} data-aos="fade-right" data-aos-delay="70" />
+          <Text className="subhead" fontSize={{ base: "3xl", md: "5xl" }} data-aos="fade-left" data-aos-offset="50" data-aos-delay="90">
             About <span style={{ color: COLOR.MAIN_BLUE }}>Me</span>
           </Text>
         </Flex>
         <Stack spacing={10} maxW={"7xl"} direction={{ base: "column", lg: "row" }} px={{ base: "5", lg: "30", xl: "30" }} align={{ base: "center", xl: "start" }}>
-          <Box
-            w={{ base: "250px", md: "xs", lg: "sm" }}
-            h={{ base: "250px", md: "xs", lg: "sm" }}
-            borderRadius={"full"}
-            backgroundImage={Picture}
-            backgroundPosition={"center"}
-            backgroundSize={"cover"}
-            data-aos="fade-right"
-            data-aos-offset="50"
-            data-aos-delay="100"
-          />
+          <Tooltip hasArrow label={"Flip me!"} position={"absolute"}>
+            <Box
+              w={{ base: "250px", md: "xs", lg: "sm" }}
+              h={{ base: "250px", md: "xs", lg: "sm" }}
+              borderRadius={"full"}
+              backgroundImage={personImage ? lynxPic : personPic}
+              backgroundPosition={"center"}
+              backgroundSize={"cover"}
+              style={{ transform: `scaleX(${personImage ? "1" : "-1"})` }}
+              filter={"grayscale(100%)"}
+              transition="all 200ms linear !important"
+              _hover={{
+                filter: "grayscale(0%)",
+              }}
+              onClick={() => {
+                setPersonImage((prev) => !prev);
+              }}
+              data-aos="fade-right"
+              data-aos-offset="50"
+              data-aos-delay="100"
+            />
+          </Tooltip>
           <Flex flex={2} gap={{ base: "10", lg: "5" }} direction={"column"} textAlign={{ base: "center", lg: "start" }}>
-            <Heading fontSize={{ base: "3xl", lg: "4xl" }} data-aos="zoom-in" data-aos-offset="50" data-aos-delay="300">
+            <Heading fontSize={{ base: "3xl", lg: "4xl" }} data-aos="zoom-in" data-aos-offset="50" data-aos-delay="300" id="name-typed">
               <TypedJS string={['Muhammad <span style="color: #4299e1;">Raihan</span> Firdaus']} disableCursor={true} />
             </Heading>
             <Heading fontSize={"xl"} fontWeight={350} textAlign={{ base: "justify", lg: "start" }} data-aos="fade-left" data-aos-offset="50" data-aos-delay="500">

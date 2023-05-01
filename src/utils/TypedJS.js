@@ -15,7 +15,6 @@ export default function TypedJS({ string, loop, speed, disableCursor }) {
     });
 
     return () => {
-      // Destroy Typed instance during cleanup to stop animation
       typed.destroy();
     };
   }, []);
