@@ -116,13 +116,8 @@ const NAV_ITEMS = [
     delay: "300",
   },
   {
-    label: "Certificates",
-    href: "#certificates",
-    delay: "400",
-  },
-  {
     label: "My Projects",
     href: "#projects",
-    delay: "500",
+    delay: "400",
   },
 ];

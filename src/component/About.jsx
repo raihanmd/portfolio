@@ -3,13 +3,15 @@ import { GoPerson } from "react-icons/go";
 import { BsArrowDownCircle } from "react-icons/bs";
 import { RiRoadMapFill } from "react-icons/ri";
 import { MdMail } from "react-icons/md";
-import COLOR from "../constant/color";
-import lynxPic from "../images/picture.webp";
-import personPic from "../images/pictureai.jpg";
+import { useEffect, useState } from "react";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 import TypedJS from "../utils/TypedJS";
-import { useEffect, useState } from "react";
+import COLOR from "../constant/color";
+import lynxPic from "../images/picture.webp";
+import personPic from "../images/youngai.jpg";
 
 export default function About() {
   const [personImage, setPersonImage] = useState(true);
@@ -20,11 +22,11 @@ export default function About() {
   });
 
   return (
-    <Container minW={"full"} background={"white"} mx={"auto"} py={{ base: 10, "2xl": 20 }} overflow={"hidden"} zIndex={"100"}>
-      <Stack id="about" spacing={10} mx={"auto"} maxW={{ base: "xl", xl: "5xl", "2xl": "7xl" }} py={10} direction={"column"} background={"white"} px={{ lg: "38", xl: "30" }}>
+    <Container minW={"full"} bg={"white"} mx={"auto"} py={{ base: 10, "2xl": 20 }} overflow={"hidden"}>
+      <Stack id="about" spacing={10} mx={"auto"} maxW={{ base: "xl", xl: "5xl", "2xl": "7xl" }} py={10} direction={"column"} px={{ lg: "38", xl: "30" }}>
         <Flex justify={"center"} align={"center"} gap={2} maxW={"7xl"}>
           <Icon fontSize={{ base: "4xl", md: "5xl" }} as={GoPerson} color={COLOR.MAIN_COLOR} data-aos="fade-right" data-aos-delay="70" />
-          <Text className="subhead" fontSize={{ base: "3xl", md: "5xl" }} data-aos="fade-left" data-aos-offset="50" data-aos-delay="90">
+          <Text className="subhead" fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }} data-aos="fade-left" data-aos-offset="50" data-aos-delay="90">
             About <span style={{ color: COLOR.MAIN_BLUE }}>Me</span>
           </Text>
         </Flex>
@@ -33,6 +35,7 @@ export default function About() {
             <Box
               w={{ base: "250px", md: "xs", lg: "sm" }}
               h={{ base: "250px", md: "xs", lg: "sm" }}
+              cursor={"pointer"}
               borderRadius={"full"}
               backgroundImage={personImage ? lynxPic : personPic}
               backgroundPosition={"center"}
@@ -42,6 +45,7 @@ export default function About() {
               transition="all 200ms linear !important"
               _hover={{
                 filter: "grayscale(0%)",
+                boxShadow: "2xl",
               }}
               onClick={() => {
                 setPersonImage((prev) => !prev);
@@ -55,7 +59,7 @@ export default function About() {
             <Heading fontSize={{ base: "3xl", lg: "4xl" }} data-aos="zoom-in" data-aos-offset="50" data-aos-delay="300" id="name-typed">
               <TypedJS string={['Muhammad <span style="color: #4299e1;">Raihan</span> Firdaus']} disableCursor={true} />
             </Heading>
-            <Heading fontSize={"xl"} fontWeight={350} textAlign={{ base: "justify", lg: "start" }} data-aos="fade-left" data-aos-offset="50" data-aos-delay="500">
+            <Heading fontSize={"xl"} fontWeight={350} textAlign={{ base: "justify", lg: "justify" }} data-aos="fade-left" data-aos-offset="50" data-aos-delay="500">
               My name is Muhammad Raihan Firdaus, I currently reside in West Java, Indonesia. I am 16 years old student at SMK Miftahussalam. My passion lies in web development, specifically in both front-end and back-end development, as
               well as game development. I am highly motivated to learn and expand my skills in these fields, and I am always on the lookout for new and exciting projects to work on. In my free time, I enjoy experimenting with various coding
               languages and frameworks. I am excited to continue pursuing my interests and developing my portfolio in the ever-growing field of web and game development.
