@@ -5,7 +5,7 @@ import About from "./component/About";
 import Projects from "./component/Projects";
 
 function App() {
-  // document.oncontextmenu = new Function("return false;");
+  document.oncontextmenu = new Function("return false;");
   return (
     <ChakraProvider theme={theme}>
       <Hero />

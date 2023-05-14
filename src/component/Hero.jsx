@@ -12,6 +12,7 @@ import "aos/dist/aos.css";
 
 AOS.init({
   startEvent: "load",
+  once: true,
 });
 
 export default function Hero() {

@@ -88,6 +88,7 @@ export default function About() {
                 boxShadow={"0px 1px 25px -5px rgb(232 160 191 / 48%), 0 10px 10px -5px rgb(232 160 191 / 43%)"}
                 _hover={{
                   bg: "#D090AB",
+                  textDecoration: "none",
                 }}
                 _focus={{
                   bg: "#D090AB",
@@ -111,6 +112,7 @@ export default function About() {
                 boxShadow={"0px 1px 25px -5px rgb(232 160 191 / 48%), 0 10px 10px -5px rgb(232 160 191 / 43%)"}
                 _hover={{
                   bg: "#D090AB",
+                  textDecoration: "none",
                 }}
                 _focus={{
                   bg: "#D090AB",

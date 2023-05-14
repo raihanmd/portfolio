@@ -59,12 +59,3 @@ p.subhead {
     transform: rotateZ(-360deg);
   }
 }
-
-div.portfolio-image {
-  transform: rotateZ(-8deg);
-}
-
-div.portfolio-image:hover {
-  filter: grayscale(100%);
-  transform: rotateZ(-3deg) scale(110%);
-}
