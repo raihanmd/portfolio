@@ -47,10 +47,12 @@ export default function Hero() {
               <Button
                 data-aos="fade-up"
                 data-aos-delay={"1200"}
+                as={Link}
                 marginTop={{ lg: "16" }}
                 px={"1.65rem"}
                 fontSize={"sm"}
                 rounded={"full"}
+                href={"#footer"}
                 bg={"blue.400"}
                 color={"white"}
                 boxShadow={"0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"}

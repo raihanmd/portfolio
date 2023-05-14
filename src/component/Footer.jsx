@@ -27,7 +27,7 @@ const SocialButton = ({ children, label, href }) => {
 
 export default function Footer() {
   return (
-    <Box bg={"gray.50"} color={"gray.700"}>
+    <Box bg={"gray.50"} color={"gray.700"} id={"footer"}>
       <Container as={Stack} maxW={"6xl"} py={4} direction={{ base: "column", md: "row" }} spacing={4} justify={{ base: "center", md: "space-between" }} align={{ base: "center", md: "center" }}>
         <Text>© {new Date().getFullYear()} Raihanmd. All rights reserved</Text>
         <Stack direction={"row"} spacing={6}>
