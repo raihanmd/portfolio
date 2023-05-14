@@ -3,6 +3,7 @@ import Hero from "./component/Hero";
 import theme from "./constant/theme";
 import About from "./component/About";
 import Projects from "./component/Projects";
+import Footer from "./component/Footer";
 
 function App() {
   document.oncontextmenu = new Function("return false;");
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <About />
       <Projects />
+      <Footer />
     </ChakraProvider>
   );
 }
