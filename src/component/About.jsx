@@ -10,7 +10,7 @@ import "aos/dist/aos.css";
 
 import COLOR from "../constant/color";
 import lynxPic from "../images/picture.webp";
-import personPic from "../images/youngai.jpg";
+import personPic from "../images/person_ai.jpg";
 
 export default function About() {
   const [personImage, setPersonImage] = useState(true);
@@ -37,7 +37,7 @@ export default function About() {
               cursor={"pointer"}
               borderRadius={"full"}
               backgroundImage={personImage ? lynxPic : personPic}
-              backgroundPosition={"center"}
+              backgroundPosition={"top"}
               backgroundSize={"cover"}
               style={{ transform: `scaleX(${personImage ? "1" : "-1"})` }}
               filter={"grayscale(100%)"}
