@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.76bb41ee.css",
+    "main.js": "/static/js/main.4fbe7839.js",
+    "static/js/787.776c2484.chunk.js": "/static/js/787.776c2484.chunk.js",
+    "static/media/person_ai.jpg": "/static/media/person_ai.9a1f511b2e9500191849.jpg",
+    "static/media/quran_project.webp": "/static/media/quran_project.d15c9241c6eb319d170e.webp",
+    "static/media/picture.webp": "/static/media/picture.14bd93d71592960dd0e1.webp",
+    "static/media/personal_blog_project.webp": "/static/media/personal_blog_project.4b13b8b9b415144b1c1d.webp",
+    "static/media/portfolio_project.webp": "/static/media/portfolio_project.c731c5a68ffdb18519ec.webp",
+    "static/media/person.webp": "/static/media/person.ca2d65e00422322053ee.webp",
+    "static/media/blog_api_project.webp": "/static/media/blog_api_project.acfc6f81b2f33807edc0.webp",
+    "index.html": "/index.html",
+    "main.76bb41ee.css.map": "/static/css/main.76bb41ee.css.map",
+    "main.4fbe7839.js.map": "/static/js/main.4fbe7839.js.map",
+    "787.776c2484.chunk.js.map": "/static/js/787.776c2484.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76bb41ee.css",
+    "static/js/main.4fbe7839.js"
+  ]
+}
