@@ -8,24 +8,20 @@ import {
   Text,
   Button,
   Link,
-  Tooltip,
 } from "@chakra-ui/react";
 import { GoPerson } from "react-icons/go";
 import { BsArrowDownCircle } from "react-icons/bs";
 import { RiRoadMapFill } from "react-icons/ri";
 import { MdMail } from "react-icons/md";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 import COLOR from "../constant/color";
-import lynxPic from "../images/picture.webp";
-import personPic from "../images/person_2.webp";
+import personPic2 from "../images/person_2.webp";
 
 export default function About() {
-  const [personImage, setPersonImage] = useState(true);
-
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -74,30 +70,19 @@ export default function About() {
           px={{ base: "5", lg: "30", xl: "30" }}
           align={{ base: "center", xl: "start" }}
         >
-          <Tooltip hasArrow label={"Flip me!"} position={"absolute"}>
-            <Box
-              w={{ base: "250px", md: "xs", lg: "sm" }}
-              h={{ base: "250px", md: "xs", lg: "sm" }}
-              cursor={"pointer"}
-              borderRadius={"full"}
-              backgroundImage={personImage ? lynxPic : personPic}
-              backgroundPosition={"center"}
-              backgroundSize={"cover"}
-              style={{ transform: `scaleX(${personImage ? "1" : "-1"})` }}
-              filter={"grayscale(100%)"}
-              transition="all 200ms linear !important"
-              _hover={{
-                filter: "grayscale(0%)",
-                boxShadow: "2xl",
-              }}
-              onClick={() => {
-                setPersonImage((prev) => !prev);
-              }}
-              data-aos="fade-right"
-              data-aos-offset="50"
-              data-aos-delay="100"
-            />
-          </Tooltip>
+          <Box
+            w={{ base: "250px", md: "xs", lg: "sm" }}
+            h={{ base: "250px", md: "xs", lg: "sm" }}
+            cursor={"pointer"}
+            borderRadius={"full"}
+            backgroundImage={personPic2}
+            backgroundPosition={"center"}
+            backgroundSize={"cover"}
+            transition="all 200ms linear !important"
+            data-aos="fade-right"
+            data-aos-offset="50"
+            data-aos-delay="100"
+          />
           <Flex
             flex={2}
             gap={{ base: "10", lg: "5" }}
@@ -121,16 +106,18 @@ export default function About() {
               data-aos-offset="50"
               data-aos-delay="500"
             >
-              My name is Muhammad Raihan Firdaus, I currently reside in West
-              Java, Indonesia. I am {new Date().getFullYear() - 2006} years old
-              student at SMK Miftahussalam. My passion lies in web development,
-              specifically in both front-end and back-end development, as well
-              as game development. I am highly motivated to learn and expand my
-              skills in these fields, and I am always on the lookout for new and
-              exciting projects to work on. In my free time, I enjoy
-              experimenting with various coding languages and frameworks. I am
-              excited to continue pursuing my interests and developing my
-              portfolio in the ever-growing field of web and game development.
+              My name is Muhammad Raihan Firdaus, currently{" "}
+              {new Date().getFullYear() - 2006} years old. I&apos;m a passionate
+              Web Developer specializing in frontend development with a strong
+              command of React, TypeScript, and Next.js. My journey in tech
+              started with a deep interest in creating user-friendly and
+              visually appealing interfaces, which I&apos;ve honed through
+              various projects, including building responsive and modern
+              websites. In addition to my frontend expertise, I also have solid
+              experience in backend development, particularly with Golang and
+              Next.js. I enjoy working on both sides of the stack, ensuring
+              seamless integration and efficient performance across the entire
+              application.
             </Heading>
             <Box>
               {INFO.map((item) => (

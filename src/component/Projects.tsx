@@ -16,11 +16,11 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { BsClipboardCheckFill } from "react-icons/bs";
 
 import PortfolioPersonal from "../images/portfolio_project.webp";
-import PortfolioBlog from "../images/personal_blog_project.webp";
 import PortfolioKreateams from "../images/kreateams.webp";
 import PortfolioSirekap from "../images/sirekap.webp";
 import PortfolioPPDB from "../images/ppdb.webp";
 import PortfolioLaughify from "../images/laughify.webp";
+import PortfolioJournee from "../images/journee.webp";
 
 const Projects = () => {
   return (
@@ -67,14 +67,14 @@ const Projects = () => {
           pt={"14"}
           pb={{ base: "20", lg: "60" }}
         >
-          {PROJECTS.map((val) => (
+          {PROJECTS.map((val, i) => (
             <Flex
               gap={{ base: "12", md: "20" }}
               w={"full"}
-              key={val.key}
+              key={i}
               direction={{
                 base: "column",
-                lg: val.key % 2 === 0 ? "row-reverse" : "row",
+                lg: i % 2 === 0 ? "row-reverse" : "row",
               }}
             >
               <Box
@@ -83,13 +83,13 @@ const Projects = () => {
                 flex={"1"}
                 transition="all 300ms linear"
                 filter={"grayscale(100%)"}
-                mr={{ base: val.key % 2 === 0 ? "-40" : "10", md: "0" }}
-                ml={{ base: val.key % 2 === 0 ? "10" : "-40", md: "0" }}
-                transform={`rotateZ(${val.key % 2 === 0 ? "8deg" : "-8deg"})`}
+                mr={{ base: i % 2 === 0 ? "-40" : "10", md: "0" }}
+                ml={{ base: i % 2 === 0 ? "10" : "-40", md: "0" }}
+                transform={`rotateZ(${i % 2 === 0 ? "8deg" : "-8deg"})`}
                 _hover={{
                   filter: `grayscale(0%)`,
                   transform: `rotateZ(${
-                    val.key % 2 === 0 ? "3deg" : "-3deg"
+                    i % 2 === 0 ? "3deg" : "-3deg"
                   }) scale(110%)`,
                 }}
                 my={"auto"}
@@ -175,17 +175,22 @@ export default Projects;
 
 const PROJECTS = [
   {
-    key: 1,
+    image: PortfolioJournee,
+    alt: "Jourñee - Travel Agent Landing Page",
+    title: "Journee",
+    desc: "Journee is a modern and minimalist landing page designed for a travel agent, showcasing various destinations and travel packages with a stylish and intuitive interface. The website is built using Next.js and TypeScript, ensuring a robust and scalable foundation. Tailwind CSS is used for rapid styling, while shadcn/ui provides a refined component library for consistent design. To bring the site to life, Framer Motion is utilized for smooth and engaging animations, enhancing the overall user experience.",
+    techStack: "NextJS, Tailwind CSS, Shadcn/UI, Framer Motion",
+    link: "https://journee-eight.vercel.app/",
+  },
+  {
     image: PortfolioKreateams,
     alt: "Portfolio kreateams image",
     title: "Kreateams",
     desc: "Kreateams is a non-profit organization dedicated to connecting programmers worldwide to collaborate and innovate together. Our mission is to provide a platform where programmers can share knowledge, work on exciting projects, and develop their skills. We focus on creating an inclusive and supportive environment where every member can grow and contribute.",
     techStack: "NextJs, ShadcnUI, Tailwind",
-    link: "https://www.kreateams.raihanmd.site/",
-    delay: 200,
+    link: "https://kreateams-landing-page.vercel.app/",
   },
   {
-    key: 2,
     image: PortfolioPPDB,
     alt: "PPDB (UI)",
     title: "PPDB (UI)",
@@ -194,7 +199,6 @@ const PROJECTS = [
     link: "https://whatschools.vercel.app/ppdb",
   },
   {
-    key: 3,
     image: PortfolioLaughify,
     alt: "Laughify",
     title: "Laughify - Meme Comminuty",
@@ -203,7 +207,6 @@ const PROJECTS = [
     link: "https://laughify.vercel.app",
   },
   {
-    key: 4,
     image: PortfolioSirekap,
     alt: "Sirekap",
     title: "Sirekap - Aplikasi Voting (BE)",
@@ -212,16 +215,6 @@ const PROJECTS = [
     link: "https://sirekap-be.vercel.app/v1",
   },
   {
-    key: 5,
-    image: PortfolioBlog,
-    alt: "Personal Blog",
-    title: "Personal Web Blog",
-    desc: "In this project, i've created personal blog that integrates a custom-built API. By utilizing React and CSS Vanilla, i've designed an engaging user interface (UI) that enhances the overall user experience. The personal blog i am creating will serve as a digital space for you to share your thoughts, experiences, and creative endeavors with your readers. By incorporating my own custom API, i can ensure a seamless flow of dynamic and relevant content, keeping your blog fresh and engaging.",
-    techStack: "React, Vanilla CSS, React Hooks",
-    link: "https://raihanmd-blog.vercel.app",
-  },
-  {
-    key: 6,
     image: PortfolioPersonal,
     alt: "Portfolio Personal Website",
     title: "Personal Web Profile",
